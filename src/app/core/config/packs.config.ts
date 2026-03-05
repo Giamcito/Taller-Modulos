@@ -5,6 +5,8 @@ import { Pack } from "../../modules/packs/interfaces/packs.interface";
  * 
  * Esta constante simula una fuente de datos (mock) que representa
  * información básica de paquetes.
+ *
+ * @type {Pack[]}
  */
 export const PACKS: Pack[] = [
   {

@@ -5,6 +5,8 @@ import { Order } from "../../modules/orders/interfaces/orders.interface";
  * 
  * Esta constante simula una fuente de datos (mock) que representa
  * información básica de órdenes.
+ *
+ * @type {Order[]}
  */
 export const ORDERS: Order[] = [
   {

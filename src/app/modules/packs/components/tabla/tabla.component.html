@@ -1,1 +1,26 @@
-<p>tabla works!</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Artículos</th>
+        <th>Precio</th>
+        <th>Descuento</th>
+        <th>Precio Final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pack of packs">
+        <td>{{ pack.id }}</td>
+        <td>{{ pack.name }}</td>
+        <td>{{ pack.description }}</td>
+        <td>{{ pack.itemCount }}</td>
+        <td>${{ pack.price | number }}</td>
+        <td>{{ pack.discount }}%</td>
+        <td>${{ getDiscountedPrice(pack) | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
