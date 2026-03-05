@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { OrdersPrincipalComponent } from '../pages/orders-principal/orders-principal.component';
 
-
+const routes: Routes = [
+  {
+    path: '',
+    component: OrdersPrincipalComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class OrdersRoutingModule { }
